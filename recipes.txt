@@ -1,0 +1,3 @@
+recipes-graphics     - XOrg Config and such.
+recipes-kernel       - The picosam9 kernel recipes and anything with strong kernel dependencies.
+
