@@ -4,9 +4,11 @@ require linux.inc
 
 DESCRIPTION = "Linux kernel for the picosam9 board"
 
-SRCREV = "6853fe7ae3ca8b70a16f496cf38f23c6f7d42f41"
+SRCREV = "6cc85e3dccc9b078c0469980fb577b8d2ddc61bc"
 
-SRC_URI = "git://gitorious.org/picopc-kernel/kernel.git;protocol=git;branch=minibox-picopc-3.1"
+#SRC_URI = "git://gitorious.org/picopc-kernel/kernel.git;protocol=git;branch=minibox-picopc-android-3.1" #Fails fetch
+SRC_URI = "git://github.com/mini-box/picosam9-kernel.git;protocol=git;branch=minibox-picopc-android-3.1"
+
 
 LINUX_VERSION ?= "3.1"
 PV = "${LINUX_VERSION}+${PR}+git${SRCREV}"
