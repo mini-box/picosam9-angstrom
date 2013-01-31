@@ -238,6 +238,14 @@ do_install_append() {
 
 PACKAGES =+ "kernel-headers"
 FILES_kernel-headers = "${exec_prefix}/src/linux*"
+# perf must be enabled in individual kernel recipes
+PACKAGES =+ "perf-dbg perf"
+FILES_perf = "${bindir}/* \
+	${libexecdir}"
+FILES_perf-dbg = "${FILES_${PN}-dbg} \
+	${KERNEL_SRC_PATH}/tools/perf/.debug" 
+
+
 
 do_devicetree_image() {
     if test -n "${KERNEL_DEVICETREE}" ; then
